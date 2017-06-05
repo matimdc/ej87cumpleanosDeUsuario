@@ -3,7 +3,7 @@ ej87cumpleanosDeUsuario
 8.7) Escriba un programa que, dado el dato del cumpleaños del usuario (día y mes), la
 computadora diga cuál es su signo del zodiaco. Ejemplo: Se ingresa 24 y 2, la
 computadora muestra “PISCIS”.
-Algoritmo EJ23
+Algoritmo EJ23 gg
 	Definir dia Como Entero;
 	Definir mes Como Entero;
 	Escribir "Ingrese el día";
@@ -27,7 +27,7 @@ Algoritmo EJ23
 							Escribir "Sos de piscis";
 						FinSi
 					Sino
-						Escribir "Febrero solo tiene 28 días (no contemplamos años bisiestos)";	
+					Escribir "Febrero solo tiene 28 días (no contemplamos años bisiestos)";	
 					FinSi
 				3:
 					Si dia <= 20 Entonces
