@@ -127,6 +127,18 @@ public class Ej87cumpleanosDeUsuario {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        System.out.println("ingrese dia");
+        
+                System.out.println("ingrese mes");
+
     }
+    
+    public static String cumpleanosDeUsuario(int dia, int mes) {
+        
+        
+        return "s";
+    }
+    
+    
     
 }
