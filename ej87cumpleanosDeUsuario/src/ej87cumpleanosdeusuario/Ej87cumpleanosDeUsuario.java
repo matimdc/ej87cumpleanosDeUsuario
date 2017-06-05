@@ -163,23 +163,48 @@ public class Ej87cumpleanosDeUsuario {
                         }
                         break;
                     case 3:
-                            if (dia <= 20){
-						System.out.println("Sos de piscis");
-                            }else{
-						System.out.println("Sos de aries");
-                                                        }                
-                                                break;
+                        if (dia <= 20) {
+                            System.out.println("Sos de piscis");
+                        } else {
+                            System.out.println("Sos de aries");
+                        }
+                        break;
                     case 4:
-                        System.out.println("JUEVES");
+                        if (dia <= 30) {
+                            if (dia <= 21) {
+                                System.out.println("Sos de aries");
+                            } else {
+                                System.out.println("Sos de tauro");
+                            }
+                        } else {
+                            System.out.println("Abril solo tiene 30 días");
+                        }
                         break;
                     case 5:
-                        System.out.println("VIERNES");
+                        if (dia <= 22) {
+                            System.out.println("Sos de tauro");
+                        } else {
+                            System.out.println("Sos de géminis");
+                        }
                         break;
                     case 6:
-                        System.out.println("SABADO");
+                        if (dia <= 30) {
+                            if (dia <= 22) {
+                                System.out.println("Sos de géminis");
+                            } else {
+                                System.out.println("Sos de cáncer");
+                            }
+                        } else {
+                            System.out.println("Junio solo tiene 30 días");
+                        }
+
                         break;
                     case 7:
-                        System.out.println("DOMINGO");
+                        if (dia <= 22){
+						System.out.println("Sos de cáncer");
+					 } else {
+						System.out.println("Sos de leo");
+					}
                         break;
                     case 8:
                         System.out.println("MIERCOLES");
