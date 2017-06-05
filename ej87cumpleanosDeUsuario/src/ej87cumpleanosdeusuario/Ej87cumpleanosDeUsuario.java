@@ -116,6 +116,8 @@ FinAlgoritmo
  */
 package ej87cumpleanosdeusuario;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Matias
@@ -126,19 +128,83 @@ public class Ej87cumpleanosDeUsuario {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner entrada = new Scanner(System.in);
         System.out.println("ingrese dia");
-        
-                System.out.println("ingrese mes");
+        int dia = entrada.nextInt();
+
+        System.out.println("ingrese mes");
+        int mes = entrada.nextInt();
+
+        cumpleanosDeUsuario(dia, mes);
+    }
+
+    public static void cumpleanosDeUsuario(int dia, int mes) {
+
+        if (dia >= 1 && dia <= 31) {
+            if (mes >= 1 && mes <= 12) {
+
+                switch (mes) {
+                    case 1:
+                        if (dia <= 21) {
+                            System.out.println("Sos de capricornio");
+                        } else {
+                            System.out.println("Sos de acuario");
+                        }
+                        break;
+                    case 2:
+                        if (dia <= 28) {
+                            if (dia <= 19) {
+                                System.out.println("Sos de acuario");
+                            } else {
+                                System.out.println("Sos de piscis");
+                            }
+                        } else {
+                            System.out.println("Febrero solo tiene 28 días (no contemplamos años bisiestos)");
+                        }
+                        break;
+                    case 3:
+                            if (dia <= 20){
+						System.out.println("Sos de piscis");
+                            }else{
+						System.out.println("Sos de aries");
+                                                        }                
+                                                break;
+                    case 4:
+                        System.out.println("JUEVES");
+                        break;
+                    case 5:
+                        System.out.println("VIERNES");
+                        break;
+                    case 6:
+                        System.out.println("SABADO");
+                        break;
+                    case 7:
+                        System.out.println("DOMINGO");
+                        break;
+                    case 8:
+                        System.out.println("MIERCOLES");
+                        break;
+                    case 9:
+                        System.out.println("JUEVES");
+                        break;
+                    case 10:
+                        System.out.println("VIERNES");
+                        break;
+                    case 11:
+                        System.out.println("SABADO");
+                        break;
+                    case 12:
+                        System.out.println("DOMINGO");
+                        break;
+                    default:
+                        System.out.println("MES INVALIDO");
+
+                }
+            }
+        } else {
+            System.out.println("DIA INVALIDO");
+        }
 
     }
-    
-    public static String cumpleanosDeUsuario(int dia, int mes) {
-        
-        
-        return "s";
-    }
-    
-    
-    
+
 }
