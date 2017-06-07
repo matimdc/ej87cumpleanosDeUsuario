@@ -131,131 +131,137 @@ public class Ej87cumpleanosDeUsuario {
         Scanner entrada = new Scanner(System.in);
         System.out.println("ingrese dia");
         int dia = entrada.nextInt();
-
         System.out.println("ingrese mes");
         int mes = entrada.nextInt();
 
         cumpleanosDeUsuario(dia, mes);
+
+    }
+
+    static boolean validarFecha(int dia, int mes) {
+        return (((dia >= 1 && dia <= 31)
+                && (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12))
+                || ((dia >= 1 && dia <= 30)
+                && (mes == 4 || mes == 6 || mes == 9 || mes == 11))
+                || ((dia >= 1 && dia <= 29) && (mes == 2)));
     }
 
     static void cumpleanosDeUsuario(int dia, int mes) {
 
-        if (dia >= 1 && dia <= 31) {
-            if (mes >= 1 && mes <= 12) {
+        if (validarFecha(dia, mes)) {
 
-                switch (mes) {
-                    case 1:
-                        if (dia <= 21) {
-                            System.out.println("Sos de capricornio");
-                        } else {
+            switch (mes) {
+                case 1:
+                    if (dia <= 21) {
+                        System.out.println("Sos de capricornio");
+                    } else {
+                        System.out.println("Sos de acuario");
+                    }
+                    break;
+                case 2:
+                    if (dia <= 28) {
+                        if (dia <= 19) {
                             System.out.println("Sos de acuario");
-                        }
-                        break;
-                    case 2:
-                        if (dia <= 28) {
-                            if (dia <= 19) {
-                                System.out.println("Sos de acuario");
-                            } else {
-                                System.out.println("Sos de piscis");
-                            }
                         } else {
-                            System.out.println("Febrero solo tiene 28 días (no contemplamos años bisiestos)");
-                        }
-                        break;
-                    case 3:
-                        if (dia <= 20) {
                             System.out.println("Sos de piscis");
-                        } else {
+                        }
+                    } else {
+                        System.out.println("Febrero solo tiene 28 días (no contemplamos años bisiestos)");
+                    }
+                    break;
+                case 3:
+                    if (dia <= 20) {
+                        System.out.println("Sos de piscis");
+                    } else {
+                        System.out.println("Sos de aries");
+                    }
+                    break;
+                case 4:
+                    if (dia <= 30) {
+                        if (dia <= 21) {
                             System.out.println("Sos de aries");
-                        }
-                        break;
-                    case 4:
-                        if (dia <= 30) {
-                            if (dia <= 21) {
-                                System.out.println("Sos de aries");
-                            } else {
-                                System.out.println("Sos de tauro");
-                            }
                         } else {
-                            System.out.println("Abril solo tiene 30 días");
-                        }
-                        break;
-                    case 5:
-                        if (dia <= 22) {
                             System.out.println("Sos de tauro");
-                        } else {
+                        }
+                    } else {
+                        System.out.println("Abril solo tiene 30 días");
+                    }
+                    break;
+                case 5:
+                    if (dia <= 22) {
+                        System.out.println("Sos de tauro");
+                    } else {
+                        System.out.println("Sos de géminis");
+                    }
+                    break;
+                case 6:
+                    if (dia <= 30) {
+                        if (dia <= 22) {
                             System.out.println("Sos de géminis");
-                        }
-                        break;
-                    case 6:
-                        if (dia <= 30) {
-                            if (dia <= 22) {
-                                System.out.println("Sos de géminis");
-                            } else {
-                                System.out.println("Sos de cáncer");
-                            }
                         } else {
-                            System.out.println("Junio solo tiene 30 días");
-                        }
-
-                        break;
-                    case 7:
-                        if (dia <= 22) {
                             System.out.println("Sos de cáncer");
-                        } else {
-                            System.out.println("Sos de leo");
                         }
-                        break;
-                    case 8:
-                        if (dia <= 24) {
-                            System.out.println("Sos de leo");
-                        } else {
-                            System.out.println("Sos de virgo");
-                        }
-                        break;
-                    case 9:
-                        if (dia <= 30) {
-                            if (dia <= 23) {
-                                System.out.println("Sos de virgo");
-                            } else {
-                                System.out.println("Sos de libra");
-                            }
-                        } else {
-                            System.out.println("Septiembre solo tiene 30 días");
-                        }
-                        break;
-                    case 10:
-                        if (dia <= 23) {
-                            System.out.println("Sos de libra");
-                        } else {
-                            System.out.println("Sos de escorpio");
-                        }
-                        break;
-                    case 11:
-                        if (dia <= 30) {
-                            if (dia <= 23) {
-                                System.out.println("Sos de escorpio");
-                            } else {
-                                System.out.println("Sos de sagitario");
-                            }
-                        } else {
-                            System.out.println("Noviembre solo tiene 30 días");
-                        }
-                        break;
+                    } else {
+                        System.out.println("Junio solo tiene 30 días");
+                    }
 
-                    case 12:
-                        if (dia <= 22) {
-                            System.out.println("Sos de sagitario");
+                    break;
+                case 7:
+                    if (dia <= 22) {
+                        System.out.println("Sos de cáncer");
+                    } else {
+                        System.out.println("Sos de leo");
+                    }
+                    break;
+                case 8:
+                    if (dia <= 24) {
+                        System.out.println("Sos de leo");
+                    } else {
+                        System.out.println("Sos de virgo");
+                    }
+                    break;
+                case 9:
+                    if (dia <= 30) {
+                        if (dia <= 23) {
+                            System.out.println("Sos de virgo");
                         } else {
-                            System.out.println("Sos de capricornio");
+                            System.out.println("Sos de libra");
                         }
-                        break;
-                    default:
-                        System.out.println("MES INVALIDO");
-                }
+                    } else {
+                        System.out.println("Septiembre solo tiene 30 días");
+                    }
+                    break;
+                case 10:
+                    if (dia <= 23) {
+                        System.out.println("Sos de libra");
+                    } else {
+                        System.out.println("Sos de escorpio");
+                    }
+                    break;
+                case 11:
+                    if (dia <= 30) {
+                        if (dia <= 23) {
+                            System.out.println("Sos de escorpio");
+                        } else {
+                            System.out.println("Sos de sagitario");
+                        }
+                    } else {
+                        System.out.println("Noviembre solo tiene 30 días");
+                    }
+                    break;
+
+                case 12:
+                    if (dia <= 22) {
+                        System.out.println("Sos de sagitario");
+                    } else {
+                        System.out.println("Sos de capricornio");
+                    }
+                    break;
             }
         } else {
-            System.out.println("DIA INVALIDO");
+
+            System.out.println("FECHA INVALIDA");
+
         }
     }
 }
