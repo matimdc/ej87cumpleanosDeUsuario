@@ -252,13 +252,10 @@ public class Ej87cumpleanosDeUsuario {
                         break;
                     default:
                         System.out.println("MES INVALIDO");
-
                 }
             }
         } else {
             System.out.println("DIA INVALIDO");
         }
-
     }
-
 }
