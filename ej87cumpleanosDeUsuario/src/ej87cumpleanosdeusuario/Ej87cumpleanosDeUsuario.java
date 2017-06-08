@@ -125,25 +125,30 @@ import java.util.Scanner;
 public class Ej87cumpleanosDeUsuario {
 
     /**
-     * @param args the command line arguments
+     * @param sargs the command line arguments
      */
-    public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-        System.out.println("ingrese dia");
-        int dia = entrada.nextInt();
-        System.out.println("ingrese mes");
-        int mes = entrada.nextInt();
-
-        cumpleanosDeUsuario(dia, mes);
-
+    public static void main(String[] sargs) {
+    
+      cumpleanosDeUsuario(obtenerEntero("el dia"), obtenerEntero("el mes"));
+    //  System.out.println(validarFecha(obtenerEntero("el dia"), obtenerEntero("el mes")));
+      
+      
     }
 
+    static int obtenerEntero(String x){
+     Scanner entrada = new Scanner(System.in);
+        System.out.println("ingrese " + x + ": ");
+    return entrada.nextInt();
+    
+    }
+
+    
     static boolean validarFecha(int dia, int mes) {
-        return (((dia >= 1 && dia <= 31)
+        return ( ( ( dia >= 1 && dia <= 31 )
                 && (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12))
                 || ((dia >= 1 && dia <= 30)
                 && (mes == 4 || mes == 6 || mes == 9 || mes == 11))
-                || ((dia >= 1 && dia <= 29) && (mes == 2)));
+                || ((dia >= 1 && dia <= 29) && (mes == 2) ) );
     }
 
     static void cumpleanosDeUsuario(int dia, int mes) {
